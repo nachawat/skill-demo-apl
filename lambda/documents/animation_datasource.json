@@ -1,0 +1,8 @@
+{
+    "myDocumentData": {
+        "HeaderTitle": "APL DEMO",
+        "HeaderSubTitle": "Template avec une animation",
+        "HeaderBackgroundImage": "https://d2o906d8ln7ui1.cloudfront.net/images/cheeseskillicon.png",
+        "NoAnimationText": "Votre appareil n'est pas compatible avec APL 1.1:<br>Les animations ne sont pas supportées."
+    }
+}

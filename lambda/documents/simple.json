@@ -1,0 +1,42 @@
+{
+    "type": "APL",
+    "version": "1.1",
+    "theme": "dark",
+    "import": [
+        {
+            "name": "alexa-layouts",
+            "version": "1.1.0"
+        }
+    ],
+    "settings": {},
+    "resources": [],
+    "styles": {},
+    "onMount": [],
+    "graphics": {},
+    "commands": {},
+    "layouts": {},
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            {
+                "type": "AlexaHeadline",
+                "primaryText": "${payload.myDocumentData.PrimaryText}",
+                "secondaryText": "${payload.myDocumentData.SecondaryText}",
+                "backgroundColor": "red",
+                "footerHintText": "${payload.myDocumentData.HintText}",
+                "headerAttributionImage": "${payload.myDocumentData.HeaderBackgroundImage}",
+                "headerAttributionPrimacy": true,
+                "headerAttributionText": "Attribution",
+                "headerBackButton": true,
+                "headerBackButtonAccessibilityLabel": "back",
+                "headerBackgroundColor": "transparent",
+                "headerDivider": true,
+                "headerSubtitle": "${payload.myDocumentData.HeaderSubTitle}",
+                "headerTitle": "${payload.myDocumentData.HeaderTitle}",
+                "theme": "dark"
+            }
+        ]
+    }
+}

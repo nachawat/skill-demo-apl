@@ -1,0 +1,69 @@
+{
+    "type": "APL",
+    "version": "1.0",
+    "theme": "dark",
+    "import": [
+        {
+            "name": "alexa-layouts",
+            "version": "1.0.0"
+        },
+        {
+            "name": "alexa-viewport-profiles",
+            "version": "1.0.0"
+        }
+    ],
+    "settings": {},
+    "resources": [],
+    "styles": {},
+    "onMount": [],
+    "graphics": {},
+    "commands": {},
+    "layouts": {},
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            {
+                "type": "Container",
+                "height": "100vh",
+                "width": "100vw",
+                "items": [
+                    {
+                        "type": "AlexaHeader",
+                        "headerBackButton": true,
+                        "headerNavigationAction": "goBack",
+                        "headerBackgroundColor": "green",
+                        "headerTitle": "${payload.myDocumentData.HeaderTitle}",
+                        "headerSubtitle": "${payload.myDocumentData.HeaderSubTitle}",
+                        "headerAttributionText": "Attribution",
+                        "headerAttributionImage": "${payload.myDocumentData.HeaderBackgroundImage}"
+                    },
+                    {
+                        "type": "ScrollView",
+                        "height": "80vh",
+                        "width": "100vw",
+                        "paddingTop": "5vw",
+                        "paddingBottom": "5vw",
+                        "paddingLeft": "5vw",
+                        "paddingRight": "5vw",
+                        "item": [
+                            {
+                                "type": "Text",
+                                "id": "idTextAlexa",
+                                "style": "textStyleBody",
+                                "text": "${payload.karaokeExampleData.properties.alexaText}",
+                                "speech": "${payload.karaokeExampleData.properties.alexaSpeech}"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "AlexaFooter",
+                        "when": "${@viewportProfile != @hubRoundSmall}",
+                        "hintText": "${payload.footerExampleData.properties.hintText}"
+                    }
+                ]
+            }
+        ]
+    }
+}

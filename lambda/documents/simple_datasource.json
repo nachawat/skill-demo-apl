@@ -1,0 +1,10 @@
+{
+    "myDocumentData": {
+        "HeaderTitle": "APL DEMO",
+        "HeaderSubTitle": "Template avec un seul composant",
+        "HeaderBackgroundImage": "https://d2o906d8ln7ui1.cloudfront.net/images/cheeseskillicon.png",
+        "HintText": "montre-moi le document vidéo",
+        "PrimaryText": "Je suis le texte principal du composant HeadLine",
+        "SecondaryText": "Il y a un header, un footer et un message avec deux entrées possibles"
+    }
+}

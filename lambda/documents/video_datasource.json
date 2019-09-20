@@ -1,0 +1,21 @@
+{
+    "myDocumentData": {
+        "HeaderTitle": "APL DEMO",
+        "HeaderSubTitle": "Template utilisant la fonctionnalité Karaoké",
+        "HeaderBackgroundImage": "https://d2o906d8ln7ui1.cloudfront.net/images/cheeseskillicon.png"
+    },
+    "footerExampleData": {
+        "type": "object",
+        "objectId": "footerExampleData",
+        "description": "This data source contains data for the footer hint example.",
+        "properties": {
+            "hintText": "montre-moi le document animation"
+        },
+        "transformers": [
+            {
+                "inputPath": "hintText",
+                "transformer": "textToHint"
+            }
+        ]
+    }
+}

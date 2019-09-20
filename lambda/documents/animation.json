@@ -1,0 +1,208 @@
+{
+    "type": "APL",
+    "version": "1.1",
+    "theme": "dark",
+    "import": [
+        {
+            "name": "alexa-layouts",
+            "version": "1.1.0"
+        }
+    ],
+    "settings": {},
+    "resources": [],
+    "styles": {},
+    "onMount": [
+        {
+            "type": "GraphicAnimation"
+        }
+    ],
+    "graphics": {
+        "diamond": {
+            "type": "AVG",
+            "version": "1.0",
+            "height": 100,
+            "width": 100,
+            "items": {
+                "type": "path",
+                "fill": "red",
+                "stroke": "blue",
+                "strokeWidth": 4,
+                "pathData": "M 50 0 L 100 50 L 50 100 L 0 50 z"
+            }
+        }
+    },
+    "commands": {
+        "GraphicAnimation": {
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "easing": "ease-in-out",
+                    "duration": 6000,
+                    "componentId": "idAVGcompoment",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "to": 1
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateX": "0"
+                                },
+                                {
+                                    "rotate": 720
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateX": "90vw"
+                                },
+                                {
+                                    "rotate": 0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "easing": "ease-in-out",
+                    "duration": 6000,
+                    "componentId": "idAVGcompoment",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "to": 1
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateX": "90vw"
+                                },
+                                {
+                                    "rotate": 0
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateX": "60vw",
+                                    "translateY": "50vh"
+                                },
+                                {
+                                    "rotate": 720
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "easing": "ease-in-out",
+                    "duration": 6000,
+                    "componentId": "idAVGcompoment",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "to": 1
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateX": "60vw",
+                                    "translateY": "50vh"
+                                },
+                                {
+                                    "rotate": 720
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateX": "0vw",
+                                    "translateY": "50vh"
+                                },
+                                {
+                                    "rotate": 0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "easing": "ease-in-out",
+                    "duration": 6000,
+                    "componentId": "idAVGcompoment",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "to": 1
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateX": "0vw",
+                                    "translateY": "50vh"
+                                },
+                                {
+                                    "rotate": 0
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateX": "45vw",
+                                    "translateY": "20vh"
+                                },
+                                {
+                                    "rotate": 720
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "layouts": {},
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            {
+                "type": "Container",
+                "height": "100vh",
+                "width": "100vw",
+                "items": [
+                    {
+                        "type": "AlexaHeader",
+                        "headerBackButton": true,
+                        "headerBackButtonAccessibilityLabel": "back",
+                        "headerBackgroundColor": "green",
+                        "headerTitle": "${payload.myDocumentData.HeaderTitle}",
+                        "headerSubtitle": "${payload.myDocumentData.HeaderSubTitle}",
+                        "headerAttributionText": "Attribution",
+                        "headerAttributionImage": "${payload.myDocumentData.HeaderBackgroundImage}",
+                        "headerAttributionPrimacy": true,
+                        "headerDivider": true
+                    },
+                    {
+                        "type": "VectorGraphic",
+                        "when": "${environment.aplVersion == '1.1'}",
+                        "source": "diamond",
+                        "id": "idAVGcompoment",
+                        "opacity": 0
+                    },
+                    {
+                      "type": "Text",
+                      "when": "${environment.aplVersion == null}",
+                      "source": "${payload.myDocumentData.NoAnimationText}"
+                    }
+                ]
+            }
+        ]
+    }
+}

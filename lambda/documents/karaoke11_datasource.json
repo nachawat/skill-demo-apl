@@ -1,0 +1,36 @@
+{
+    "myDocumentData": {
+        "HeaderTitle": "APL DEMO",
+        "HeaderSubTitle": "Template utilisant la fonctionnalité Karaoké",
+        "HeaderBackgroundImage": "https://d2o906d8ln7ui1.cloudfront.net/images/cheeseskillicon.png"
+    },
+    "karaokeExampleData": {
+        "type": "object",
+        "objectId": "footerExampleData",
+        "description": "This data source contains data for the karaoke example.",
+        "properties": {
+            "alexaText": "Alexa est le service de voix basé sur le cloud d'Amazon, disponible sur des dizaines de millions d'appareils Amazon et d'autres appareils de fabricants tiers. Grâce à Alexa, vous pouvez développer des expériences de voix naturelles pour offrir aux clients une manière plus intuitive d'interagir avec la technologie qu'ils utilisent au quotidien."
+        },
+        "transformers": [
+            {
+                "inputPath": "alexaText",
+                "outputName": "alexaSpeech",
+                "transformer": "textToSpeech"
+            }
+        ]
+    },
+    "footerExampleData": {
+        "type": "object",
+        "objectId": "footerExampleData",
+        "description": "This data source contains data for the footer hint example.",
+        "properties": {
+            "hintText": "montre-moi le template Vidéo"
+        },
+        "transformers": [
+            {
+                "inputPath": "hintText",
+                "transformer": "textToHint"
+            }
+        ]
+    }
+}

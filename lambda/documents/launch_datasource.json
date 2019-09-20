@@ -1,0 +1,14 @@
+{
+  "myDocumentData": {
+    "HeaderTitle": "APL DEMO",
+    "HeaderSubTitle": "Sélectionnez le template que vous voulez voir",
+    "HeaderBackgroundImage":"https://d2o906d8ln7ui1.cloudfront.net/images/cheeseskillicon.png",
+    "BackgroundImage":"https://d2o906d8ln7ui1.cloudfront.net/images/BT6_Background.png",
+    "Items": [
+        { "primaryText": "Simple" },
+        { "primaryText": "Karaoké" },
+        { "primaryText": "Video" },
+        { "primaryText": "Animation" }
+    ]
+  }
+}
